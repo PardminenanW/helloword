@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_216",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "taxisample1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

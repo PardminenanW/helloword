@@ -1,0 +1,119 @@
+{
+	"name": "DestinationDataset_sy9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics4",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "vendor_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "pickup_datetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "dropoff_datetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "store_and_fwd_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "rate_code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "pickup_longitude",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "pickup_latitude",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "dropoff_longitude",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "dropoff_latitude",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "passenger_count",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "trip_distance",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "fare_amount",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "extra",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "mta_tax",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "tip_amount",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "tolls_amount",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "improvement_surcharge",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "total_amount",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "payment_type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "pickup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "dropoff",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "taxisample"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

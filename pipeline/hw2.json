@@ -1,0 +1,112 @@
+{
+	"name": "hw2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_hyf",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.Homework_b"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Homework_b"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": false
+						},
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "col1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "col1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "col2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "col2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "col3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "col3",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_hyf",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_hyf",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-10-13T02:35:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

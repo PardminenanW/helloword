@@ -1,0 +1,318 @@
+{
+	"name": "CopyPipeline_sy9",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_sy9",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "."
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.taxisample"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlDWSource",
+						"sqlReaderQuery": "select top(10)* from [dbo].[taxisample]",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "vendor_id",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "vendor_id",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "pickup_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "dropoff_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "store_and_fwd_flag",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "store_and_fwd_flag",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "rate_code",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "rate_code",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "pickup_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "pickup_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "dropoff_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "dropoff_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "passenger_count",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "passenger_count",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "trip_distance",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "trip_distance",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "fare_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "fare_amount",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "extra",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "extra",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "mta_tax",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "mta_tax",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "tip_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "tip_amount",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "tolls_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "tolls_amount",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "improvement_surcharge",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "improvement_surcharge",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "total_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "total_amount",
+									"type": "Single",
+									"physicalType": "real"
+								}
+							},
+							{
+								"source": {
+									"name": "payment_type",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "payment_type",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "pickup",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "dropoff",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_sy9",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_sy9",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-12-22T08:28:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

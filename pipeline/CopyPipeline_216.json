@@ -1,0 +1,297 @@
+{
+	"name": "CopyPipeline_216",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_216",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.taxisample"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.taxisample1"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlDWSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "vendor_id",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "vendor_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "pickup_datetime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_datetime",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "dropoff_datetime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "store_and_fwd_flag",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "store_and_fwd_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "rate_code",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "rate_code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "pickup_longitude",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "pickup_latitude",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_longitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "dropoff_longitude",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff_latitude",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "dropoff_latitude",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "passenger_count",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "passenger_count",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "trip_distance",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "trip_distance",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "fare_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "fare_amount",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "extra",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "extra",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "mta_tax",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "mta_tax",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "tip_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "tip_amount",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "tolls_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "tolls_amount",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "improvement_surcharge",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "improvement_surcharge",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "total_amount",
+									"type": "Single",
+									"physicalType": "real"
+								},
+								"sink": {
+									"name": "total_amount",
+									"type": "Single"
+								}
+							},
+							{
+								"source": {
+									"name": "payment_type",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "payment_type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pickup",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "pickup",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "dropoff",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "dropoff",
+									"type": "Int32"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_216",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_216",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-12-22T08:51:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,170 @@
+{
+	"name": "hw3-1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_0bh",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.Homework_c"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Homework_c"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "BreOIID",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "BreOIID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "BreOITypeID",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "BreOITypeID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "BreOIAppID",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "BreOIAppID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "BreOISequenceNo",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "BreOISequenceNo",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "BreOIJobReference",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "BreOIJobReference",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BreOIPayLoad",
+									"type": "String",
+									"physicalType": "ntext"
+								},
+								"sink": {
+									"name": "BreOIPayLoad",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LastUpdateUserID",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "LastUpdateUserID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "LastUpdateDate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "LastUpdateDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "EXTRACT_DATE_TIME",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "EXTRACT_DATE_TIME",
+									"type": "DateTime"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_0bh",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_0bh",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-10-13T05:21:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

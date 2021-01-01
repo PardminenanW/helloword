@@ -1,0 +1,118 @@
+{
+	"name": "SourceDataset_1ob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "ParId",
+				"type": "char"
+			},
+			{
+				"name": "P1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "P2",
+				"type": "char"
+			},
+			{
+				"name": "P3",
+				"type": "char"
+			},
+			{
+				"name": "P4",
+				"type": "char"
+			},
+			{
+				"name": "P5",
+				"type": "char"
+			},
+			{
+				"name": "P6",
+				"type": "char"
+			},
+			{
+				"name": "P7",
+				"type": "char"
+			},
+			{
+				"name": "P8",
+				"type": "char"
+			},
+			{
+				"name": "P9",
+				"type": "char"
+			},
+			{
+				"name": "P10",
+				"type": "char"
+			},
+			{
+				"name": "P11",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "P12",
+				"type": "char"
+			},
+			{
+				"name": "P13",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "P14",
+				"type": "char"
+			},
+			{
+				"name": "P15",
+				"type": "date"
+			},
+			{
+				"name": "P16",
+				"type": "date"
+			},
+			{
+				"name": "P17",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "P18",
+				"type": "char"
+			},
+			{
+				"name": "P19",
+				"type": "char"
+			},
+			{
+				"name": "P20",
+				"type": "char"
+			},
+			{
+				"name": "P21",
+				"type": "char"
+			},
+			{
+				"name": "P22",
+				"type": "char"
+			},
+			{
+				"name": "P23",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "US_Gov"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

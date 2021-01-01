@@ -1,0 +1,72 @@
+{
+	"name": "SourceDataset_0bh",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "BreOIID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BreOITypeID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BreOIAppID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BreOISequenceNo",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BreOIJobReference",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BreOIPayLoad",
+				"type": "ntext",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "LastUpdateUserID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "LastUpdateDate",
+				"type": "datetime2",
+				"precision": 27,
+				"scale": 7
+			},
+			{
+				"name": "EXTRACT_DATE_TIME",
+				"type": "datetime2",
+				"precision": 27,
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Homework_c"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

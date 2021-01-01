@@ -1,0 +1,330 @@
+{
+	"name": "CopyPipeline_1ob",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_1ob",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.US_Gov"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.US_Gov"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlDWSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ParId",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "ParId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P1",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "P1",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "P2",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P3",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P4",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P5",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P5",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P6",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P6",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P7",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P7",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P8",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P8",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P9",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P9",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P10",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P10",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P11",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "P11",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "P12",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P12",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P13",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "P13",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "P14",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P14",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P15",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "P15",
+									"type": "Date"
+								}
+							},
+							{
+								"source": {
+									"name": "P16",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "P16",
+									"type": "Date"
+								}
+							},
+							{
+								"source": {
+									"name": "P17",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "P17",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "P18",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P18",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P19",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P19",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P20",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P20",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P21",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P21",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P22",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P22",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "P23",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"name": "P23",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_1ob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_1ob",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-12-22T08:42:14Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

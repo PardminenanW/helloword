@@ -1,0 +1,102 @@
+{
+	"name": "DW_Test",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_ipm",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.result"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.result"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": false
+						},
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "database_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "database_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DatabaseDataSpaceUsedInMB",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "DatabaseDataSpaceUsedInMB",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"name": "internal_execution_id",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "internal_execution_id",
+									"type": "Guid"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_ipm",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_ipm",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-09-23T00:47:51Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
